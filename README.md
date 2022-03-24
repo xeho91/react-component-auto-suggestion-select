@@ -60,6 +60,15 @@ To serve the built output, use:
 pnpm serve
 ```
 
+
+---
+
+## Resources & inspirations
+
+-   Blog post on [Accessible custom select dropdowns]
+
+[accessible custom select dropdowns]: https://www.webaxe.org/accessible-custom-select-dropdowns
+
 ---
 
 ## License

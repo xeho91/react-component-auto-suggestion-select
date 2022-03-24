@@ -1,3 +1,3 @@
-import { AutoSuggestionSelect as Component } from "./AutoSuggestionSelect";
+import { AutoSuggestionSelect as Component } from "$components/AutoSuggestionSelect";
 
 export const AutoSuggestionSelect = () => <Component />;
