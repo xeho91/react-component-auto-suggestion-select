@@ -10,7 +10,16 @@
 		"noUncheckedIndexedAccess": false,
 		"types": ["node", "react", "react-dom"],
 		"tsBuildInfoFile": "./node_modules/.cache/tsbuildinfo",
-		"plugins": [{ "name": "typescript-plugin-css-modules" }]
+		"plugins": [{ "name": "typescript-plugin-css-modules" }],
+		"baseUrl": ".",
+		"paths": {
+			"$components/*": ["source/components/*"],
+			"$globals/*": ["source/globals/*"],
+			"$helpers/*": ["source/helpers/*"],
+			"$hooks/*": ["source/hooks/*"],
+			"$mocks/*": ["source/mocks/*"],
+			"$utils/*": ["source/utils/*"]
+		}
 	},
 	"include": ["source/"]
 }

@@ -7,10 +7,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# Node.js packages (modules)
+node_modules/*
+
+# Built output
+build/*
+
+# Tests coverage
+coverage
 
 # Editor directories and files
 .vscode/*
@@ -22,5 +26,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-#
