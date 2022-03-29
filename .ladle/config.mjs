@@ -10,6 +10,7 @@ export default {
 			$helpers: url.pathname.replace(ladleConfigPath, "source/helpers"),
 			$hooks: url.pathname.replace(ladleConfigPath, "source/hooks"),
 			$mocks: url.pathname.replace(ladleConfigPath, "source/mocks"),
+			$stores: url.pathname.replace(ladleConfigPath, "source/stores"),
 			$utils: url.pathname.replace(ladleConfigPath, "source/utils"),
 		},
 	},

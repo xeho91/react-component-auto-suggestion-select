@@ -18,6 +18,7 @@
 			"$helpers/*": ["source/helpers/*"],
 			"$hooks/*": ["source/hooks/*"],
 			"$mocks/*": ["source/mocks/*"],
+			"$stores/*": ["source/stores/*"],
 			"$utils/*": ["source/utils/*"]
 		}
 	},
