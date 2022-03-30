@@ -1,16 +1,16 @@
 import { rest } from "msw";
 
-export const handlers = [
-	rest.post("/login", (request, response, context) => {
-		const { username } = request.body;
+import { API, getRouteURL } from "$globals/API";
+import mockedUniversitiesDataList from "$mocks/universities-data-list.json";
 
-		return response(
-			context.json({
-				id: "f79e82e8-c34a-4dc7-a49e-9fadc0979fda",
-				username,
-				firstName: "John",
-				lastName: "Maverick",
-			}),
-		);
-	}),
+export const handlers = [
+	rest.get(
+		getRouteURL(API.routes.universities.search),
+		(request, response, context) => {
+			return response(
+				context.status(200),
+				context.json(mockedUniversitiesDataList),
+			);
+		},
+	),
 ];
