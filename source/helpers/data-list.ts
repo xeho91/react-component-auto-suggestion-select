@@ -1,14 +1,14 @@
 import { isObjectEmpty } from "$helpers/object";
 
-export type DataList<Schema extends object = object> = Array<Schema>;
+export type DataListType<Schema extends object = object> = Array<Schema>;
 export type ReferenceKey<Schema> = Extract<keyof Schema, number | string>;
 export type DataListMap<Schema> = Map<Schema[ReferenceKey<Schema>], Schema>;
 
-function hasEmptyData(dataList: DataList) {
+function hasEmptyData(dataList: DataListType) {
 	return !dataList.every((data) => !isObjectEmpty(data));
 }
 
-export function isValidDataList(dataList: DataList): boolean {
+export function isValidDataList(dataList: DataListType): boolean {
 	if (!Array.isArray(dataList)) {
 		return false;
 	} else if (hasEmptyData(dataList)) {
@@ -31,7 +31,7 @@ export function isValidDataList(dataList: DataList): boolean {
 	}
 }
 
-function validateDataList(dataList: DataList): DataList {
+function validateDataList(dataList: DataListType): DataListType {
 	if (!Array.isArray(dataList)) {
 		throw new TypeError(
 			`Data list should be an array! Passed argument type is: "${typeof dataList}".`,
@@ -49,7 +49,7 @@ function validateDataList(dataList: DataList): DataList {
 // Research on how to extract the *final* type from the Schema.
 // Currently it returns an union (number | string), which is not desired.
 export function getMapFromDataList<Schema extends object = object>(
-	dataList: DataList<Schema>,
+	dataList: DataListType<Schema>,
 	referenceKey: ReferenceKey<Schema>,
 ): DataListMap<Schema> {
 	validateDataList(dataList);
