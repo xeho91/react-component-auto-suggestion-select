@@ -1,4 +1,4 @@
-import { DataList } from "$utils/DataMap";
+import { DataList } from "$utils/DataList";
 import type { ReferenceKey } from "$helpers/data-list";
 
 export interface UniversityRecord {
