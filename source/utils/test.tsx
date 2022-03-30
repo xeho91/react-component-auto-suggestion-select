@@ -1,6 +1,7 @@
 /* eslint-disable import/export */
 
 import { render, type RenderResult } from "@testing-library/react";
+import { domAnimation, LazyMotion } from "framer-motion";
 import type { ReactElement, ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 
@@ -27,9 +28,11 @@ export function createWrapper() {
 
 	// eslint-disable-next-line react/display-name
 	return ({ children }: { children: ReactNode }) => (
-		<QueryClientProvider client={testQueryClient}>
-			{children}
-		</QueryClientProvider>
+		<LazyMotion features={domAnimation} strict>
+			<QueryClientProvider client={testQueryClient}>
+				{children}
+			</QueryClientProvider>
+		</LazyMotion>
 	);
 }
 
