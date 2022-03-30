@@ -1,13 +1,37 @@
 /* eslint-disable import/export */
-import type { ReactElement } from "react";
-import { render } from "@testing-library/react";
 
-const customRender = (ui: ReactElement, options = {}) =>
+import { render, type RenderResult } from "@testing-library/react";
+import type { ReactElement, ReactNode } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+import { APIQueryClient } from "$globals/API";
+
+const customRender = (ui: ReactElement, options = {}): RenderResult =>
 	render(ui, {
-		// wrap provider(s) here if needed
 		wrapper: ({ children }) => children,
 		...options,
 	});
+
+function createTestQueryClient() {
+	return new QueryClient({
+		defaultOptions: {
+			queries: {
+				retry: false,
+			},
+		},
+	});
+}
+
+export function createWrapper() {
+	const testQueryClient = createTestQueryClient();
+
+	// eslint-disable-next-line react/display-name
+	return ({ children }: { children: ReactNode }) => (
+		<QueryClientProvider client={testQueryClient}>
+			{children}
+		</QueryClientProvider>
+	);
+}
 
 export * from "@testing-library/react";
 export * from "@testing-library/jest-dom";
