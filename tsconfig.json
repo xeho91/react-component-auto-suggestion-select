@@ -19,6 +19,7 @@
 			"$hooks/*": ["source/hooks/*"],
 			"$mocks/*": ["source/mocks/*"],
 			"$stores/*": ["source/stores/*"],
+			"$styles/*": ["source/styles/*"],
 			"$utils/*": ["source/utils/*"]
 		}
 	},

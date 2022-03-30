@@ -11,6 +11,7 @@ export default {
 			$hooks: url.pathname.replace(ladleConfigPath, "source/hooks"),
 			$mocks: url.pathname.replace(ladleConfigPath, "source/mocks"),
 			$stores: url.pathname.replace(ladleConfigPath, "source/stores"),
+			$styles: url.pathname.replace(ladleConfigPath, "source/styles"),
 			$utils: url.pathname.replace(ladleConfigPath, "source/utils"),
 		},
 	},
