@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 
 import { AutoSuggestionSelect } from "$components/AutoSuggestionSelect";
 import { APIQueryClient } from "$globals/API";
-import { render, screen } from "$utils/test";
+import { render, screen } from "test";
 
 describe("AutoSuggestionSelect", () => {
 	it("Should render the component in DOM", async () => {

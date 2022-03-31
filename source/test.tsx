@@ -5,8 +5,6 @@ import { domAnimation, LazyMotion } from "framer-motion";
 import type { ReactElement, ReactNode } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-import { APIQueryClient } from "$globals/API";
-
 const customRender = (ui: ReactElement, options = {}): RenderResult =>
 	render(ui, {
 		wrapper: ({ children }) => children,

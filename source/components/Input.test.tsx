@@ -1,7 +1,7 @@
 import { describe, expect, fn, it } from "vitest";
 
 import { Input } from "$components/Input";
-import { fireEvent, render, screen } from "$utils/test";
+import { fireEvent, render, screen } from "$test";
 
 describe("<Input />", () => {
 	it("Should render the component in DOM", async () => {

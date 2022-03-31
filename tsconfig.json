@@ -20,6 +20,7 @@
 			"$mocks/*": ["source/mocks/*"],
 			"$stores/*": ["source/stores/*"],
 			"$styles/*": ["source/styles/*"],
+			"$test": ["source/test.tsx"],
 			"$utils/*": ["source/utils/*"]
 		}
 	},

@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 
 import { useUniversities } from "$hooks/useUniversities";
 import mockedUniversitiesDataList from "$mocks/universities-data-list.json";
-import { createWrapper } from "$utils/test";
+import { createWrapper } from "$test";
 import { UniversitiesDataList } from "$utils/UniversitiesDataList";
 
 describe("useUniversities(name, country?)", () => {

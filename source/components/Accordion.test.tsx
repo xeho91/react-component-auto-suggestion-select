@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { Accordion } from "$components/Accordion";
-import { fireEvent, render, screen, waitFor } from "$utils/test";
+import { fireEvent, render, screen, waitFor } from "test";
 
 const TEST_IDS = {
 	button: "accordion-button",
