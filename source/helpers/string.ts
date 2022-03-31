@@ -1,5 +1,5 @@
 export function isString(value: unknown): boolean {
-    return typeof value === "string";
+	return typeof value === "string";
 }
 
 export function isStringEmpty(string: string): boolean {

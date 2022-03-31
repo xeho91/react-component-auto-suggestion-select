@@ -30,5 +30,3 @@ describe("isNumber(argument)", () => {
 		expect(isNumber(BigInt(100))).toBe(false);
 	});
 });
-
-
