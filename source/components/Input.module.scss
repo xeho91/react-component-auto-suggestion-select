@@ -1,0 +1,50 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	row-gap: theme("spacing.1");
+
+	& > .label {
+		/* . */
+	}
+
+	& > .input {
+		padding-block: theme("spacing.4");
+		padding-inline: theme("spacing.6");
+
+		color: var(--text-color);
+
+		background-color: var(--background-color);
+		border-color: var(--border-color);
+		border-style: solid;
+		border-width: theme("borderWidth.2");
+		border-radius: theme("borderRadius.md");
+
+		@apply transition-colors;
+
+		&:focus {
+			--background-color: theme("colors.white");
+			--text-color: theme("colors.black");
+		}
+
+		&:not(:focus) {
+			--text-color: theme("colors.violet.800");
+			--background-color: theme("colors.violet.50");
+			--border-color: theme("colors.violet.800");
+		}
+
+		&:invalid {
+			--text-color: theme("colors.red.800");
+
+			&:not(:focus) {
+				--background-color: theme("colors.red.50");
+				--border-color: theme("colors.red.800");
+			}
+		}
+	}
+
+	& > .error {
+		color: theme("colors.red.800");
+
+		transform-origin: left;
+	}
+}
