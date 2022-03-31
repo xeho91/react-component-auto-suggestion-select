@@ -1,0 +1,117 @@
+.wrapper {
+	--width: theme("width.80");
+	--max-height: theme("height.80");
+	--item-height: theme("height.16");
+	--padding: theme("spacing.4");
+	--item-padding: calc(var(--padding) / 2);
+	--background-color: theme("colors.violet.50");
+	--border-color: theme("colors.violet.300");
+	--border-width: theme("borderWidth.2");
+
+	width: var(--width);
+	max-height: var(--max-height);
+	padding-inline: var(--padding);
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	background-color: var(--background-color);
+	border-color: var(--border-color);
+	border-block-width: var(--border-width);
+
+	& > .list {
+		position: relative;
+
+		height: var(--total-size);
+		min-height: theme("height.12");
+		padding-left: var(--item-padding);
+	}
+}
+
+.placeholder {
+	position: absolute;
+	inset: 0;
+
+	display: inline-flex;
+	place-items: center;
+	column-gap: 1ch;
+
+	width: calc(100% - var(--item-padding));
+	padding-block: var(--item-padding);
+	padding-left: var(--item-padding);
+
+	color: theme("colors.blue.800");
+
+	& > .placeholder_icon {
+		--size: theme("height.6");
+
+		width: var(--size);
+		height: var(--size);
+		aspect-ratio: 1 / 1;
+	}
+
+	& > .placeholder_message {
+		font-style: italic;
+	}
+}
+
+.item {
+	position: absolute;
+
+	display: inline-grid;
+	grid-template-columns: 5fr 1fr;
+	place-content: center;
+	place-items: center;
+	column-gap: var(--padding);
+
+	width: calc(100% - var(--item-padding));
+	height: calc(var(--item-height) - var(--item-padding));
+	padding-block: var(--item-padding);
+	overflow: hidden;
+
+	background-color: var(--background-color);
+
+	transform: translateY(var(--item-position-start));
+	transform-origin: top left;
+
+	&:not(:last-of-type) {
+		border-color: var(--border-color);
+		border-bottom-width: var(--border-width);
+	}
+
+	& > .item_value {
+		place-self: start;
+
+		/* stylelint-disable-next-line value-no-vendor-prefix */
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+
+		padding-left: 1ch;
+		overflow: hidden;
+
+		font-family: theme("fontFamily.sans");
+		font-size: smaller;
+		font-weight: var(--font-weight);
+		text-overflow: ellipsis;
+	}
+
+	& > .item_icon_selected {
+		--size: theme("height.6");
+
+		width: var(--size);
+		height: var(--size);
+		aspect-ratio: 1 / 1;
+
+		color: theme("colors.green.800");
+	}
+
+	&[aria-selected="true"] {
+		--font-weight: theme("fontWeight.extrabold");
+		--background-color: theme("colors.violet.200");
+	}
+
+	&[aria-selected="false"] {
+		--font-weight: theme("fontWeight.medium");
+		--background-color: transparent;
+	}
+}
