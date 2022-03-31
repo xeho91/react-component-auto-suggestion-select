@@ -1,6 +1,6 @@
 import { describe, expect, fn, it } from "vitest";
 
-import { Input } from "$components/Input";
+import { Input } from "$components/children/Input";
 import { fireEvent, render, screen } from "$test";
 
 describe("<Input />", () => {

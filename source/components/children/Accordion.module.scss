@@ -4,7 +4,7 @@
 	--header-height: theme("height.12");
 	--content-height: theme("height.24");
 	--padding: theme("spacing.2");
-	--background-color: theme("colors.violet.50");
+	--background-color: theme("colors.violet.200");
 	--border-color: theme("colors.black");
 	--border-style: solid;
 	--border-width: theme("borderWidth.2");
@@ -88,7 +88,6 @@
 		}
 	}
 }
-
 
 .panel {
 	position: absolute;

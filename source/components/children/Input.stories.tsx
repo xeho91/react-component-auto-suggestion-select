@@ -1,4 +1,4 @@
-import { Input as Component } from "$components/Input";
+import { Input as Component } from "$components/children/Input";
 
 export const Empty = () => <Component label="Universities" />;
 
