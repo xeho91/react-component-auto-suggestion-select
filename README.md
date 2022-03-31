@@ -72,7 +72,7 @@ There are the following scripts available:
     pnpm coverage
     ```
 
--   **simple run of tests**, use:
+-   for **simple run of tests**, use:
 
     ```sh
     pnpm test
@@ -84,19 +84,15 @@ There are the following scripts available:
     pnpm test:dev
     ```
 
--   to **run tests in Vitest' built-in UI**\_, use:
-
-    ```sh
-    pnpm test:ui
-    ```
-
 ---
 
 ## Resources & inspirations
 
--   Blog post on [Accessible custom select dropdowns]
+-   Blog post on [accessible custom select dropdowns]
+-   Blog post on [accessible accordion]
 
 [accessible custom select dropdowns]: https://www.webaxe.org/accessible-custom-select-dropdowns
+[accessible accordion]: https://www.aditus.io/patterns/accordion/
 
 ---
 
